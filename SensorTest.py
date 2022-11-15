@@ -7,8 +7,10 @@ A = 2
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GPIO.cleanup()
+print("PRE LOOP")
 
 while True:
+   print("OUTSIDE LOOP")
    GPIO.setup(A,GPIO.OUT)
    GPIO.output(A,True)
    sleep(0.00001)
