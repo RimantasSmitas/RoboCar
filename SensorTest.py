@@ -13,7 +13,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.cleanup()
 
 
-GPIO.setup(A, GPIO.IN)
+GPIO.setup(A, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 
 
 while True:
@@ -21,7 +21,3 @@ while True:
 
    print(GPIO.input(A))
 
-
-   GpioPinDigitalInput myButton = gpio.provisionDigitalInputPin(2, PinPullResistance.PULL_UP);
-   print("Sensor Ab")
-   print(myButton)
