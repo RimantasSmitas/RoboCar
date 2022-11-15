@@ -39,12 +39,12 @@ GPIO.output(DirectionPin1, True)
 
 #start PWM of required Duty Cycle 
 while True:
-    for duty in range(90,101,1):
+    for duty in range(95,101,1):
         pi_pwm.ChangeDutyCycle(duty) #provide duty cycle in the range 0-100
         pi_pwm1.ChangeDutyCycle(duty)
         sleep(10)
                 
-    for duty in range(100,90,-1):
+    for duty in range(100,95,-1):
         pi_pwm.ChangeDutyCycle(duty)
         pi_pwm1.ChangeDutyCycle(duty)
         sleep(10)
