@@ -18,7 +18,7 @@ DirectionPin1 = 3
 GPIO.setwarnings(False)			#disable warnings
 GPIO.setmode(GPIO.BOARD)	#set pin numbering system
 
-gpio.cleanup()
+GPIO.cleanup()
 
 GPIO.setup(SpeendPin,GPIO.OUT)
 GPIO.setup(SpeendPin1,GPIO.OUT)
@@ -33,8 +33,8 @@ pi_pwm.start(0)
 pi_pwm1 = GPIO.PWM(SpeedPin1,1000)		#create PWM instance with frequency
 pi_pwm1.start(0)			
 
-gpio.output(DirectionPin, True)
-gpio.output(DirectionPin1, True)
+GPIO.output(DirectionPin, True)
+GPIO.output(DirectionPin1, True)
 
 
 #start PWM of required Duty Cycle 
