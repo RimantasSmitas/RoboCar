@@ -4,7 +4,7 @@ import time
 
 
 
-A = 6
+A = 2
 
 
 
