@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-import time
+from time import sleep
 
 
 
@@ -20,4 +20,4 @@ while True:
    print("Sensor A")
 
    print(GPIO.input(A))
-
+   sleep(1)
