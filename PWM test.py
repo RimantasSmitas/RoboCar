@@ -5,6 +5,7 @@
 
 
 
+from turtle import speed
 import RPi.GPIO as GPIO
 from time import sleep
 
@@ -20,8 +21,8 @@ GPIO.setmode(GPIO.BOARD)	#set pin numbering system
 
 GPIO.cleanup()
 
-GPIO.setup(SpeendPin,GPIO.OUT)
-GPIO.setup(SpeendPin1,GPIO.OUT)
+GPIO.setup(SpeedPin,GPIO.OUT)
+GPIO.setup(SpeedPin1,GPIO.OUT)
 
 GPIO.setup(DirectionPin,GPIO.OUT)
 GPIO.setup(DirectionPin1,GPIO.OUT)
