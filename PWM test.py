@@ -16,7 +16,7 @@ DirectionPin = 2
 DirectionPin1 = 3
 
 GPIO.setwarnings(False)			#disable warnings
-GPIO.setmode(GPIO.BOARD)	#set pin numbering system
+GPIO.setmode(GPIO.BCM)	#set pin numbering system
 
 GPIO.cleanup()
 
