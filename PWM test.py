@@ -42,9 +42,9 @@ while True:
     for duty in range(50,101,1):
         pi_pwm.ChangeDutyCycle(duty) #provide duty cycle in the range 0-100
         pi_pwm1.ChangeDutyCycle(duty)
-        sleep(0.5)
+        sleep(10)
                 
     for duty in range(100,50,-1):
         pi_pwm.ChangeDutyCycle(duty)
         pi_pwm1.ChangeDutyCycle(duty)
-        sleep(0.5)
+        sleep(10)
