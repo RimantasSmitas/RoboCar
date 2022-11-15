@@ -9,10 +9,10 @@ GPIO.setmode(GPIO.BCM)
 GPIO.cleanup()
 
 while True:
-   GPIO.setup(A,GPIO.Out)
+   GPIO.setup(A,GPIO.OUT)
    GPIO.output(A,True)
    sleep(0.00001)
-   GPIO.setup(A,GPIO.In)
+   GPIO.setup(A,GPIO.IN)
    timest = time.time_ns()
 
    while (GPIO.input(A)==True and (time_ns() - timest < 3000)):
