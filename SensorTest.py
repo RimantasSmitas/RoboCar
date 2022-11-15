@@ -13,7 +13,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.cleanup()
 
 
-GPIO.setup(A, GPIO.IN, pull_up_down = GPIO.PUD_UP)
+GPIO.setup(A, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 
 
 while True:
