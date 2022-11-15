@@ -16,7 +16,6 @@ while True:
    timest = time.time_ns()/1000
    while (GPIO.input(A)==True and ((time.time_ns()/1000) - timest < 3000)):
       timeCalc = (time.time_ns()/1000) - timest 
-      print("Sensor A")
       print(timeCalc)
       sleep(1)
    
