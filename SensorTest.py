@@ -12,6 +12,7 @@ while True:
    GPIO.setup(A,GPIO.OUT)
    GPIO.output(A,True)
    sleep(0.00001)
+   GPIO.output(A,False)
    GPIO.setup(A,GPIO.IN)
    timest = time.time_ns()/1000
    while (GPIO.input(A)==True and ((time.time_ns()/1000) - timest < 3000)):
