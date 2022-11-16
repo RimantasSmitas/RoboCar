@@ -15,8 +15,8 @@ while True:
    GPIO.output(A,False)
    GPIO.setup(A,GPIO.IN)
    timest = time.time_ns()
-   while (GPIO.input(A)==True and ((time.time_ns()) - timest < 3000)):
+   while (GPIO.input(A)==True and ((time.time_ns()) - timest < 3000000)):
       timeCalc = (time.time_ns()) - timest 
       print(timeCalc)
-      sleep(1)
+      sleep(0.25)
    
