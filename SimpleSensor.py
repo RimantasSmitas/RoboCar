@@ -1,5 +1,5 @@
-import RPi.GPIO as GPIO
-
+import RPi.GPIO 
+from time import sleep 
 
 A = 2
 
