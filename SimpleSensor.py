@@ -11,3 +11,4 @@ GPIO.setup(A,GPIO.IN)
 
 while True:
     print (GPIO.input(A))
+    sleep(1)
