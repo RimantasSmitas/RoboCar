@@ -10,4 +10,4 @@ GPIO.setup(A,GPIO.IN)
 
 
 while True:
-    print GPIO.input(A)
+    print (GPIO.input(A))
