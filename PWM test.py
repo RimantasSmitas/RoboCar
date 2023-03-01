@@ -1,14 +1,9 @@
 #PWM test
 
-
-
-
-
-
 import RPi.GPIO as GPIO
 from time import sleep
 
-SpeedPin = 12
+SpeedPin = 11
 SpeedPin1 = 13
 # PWM pins
 
