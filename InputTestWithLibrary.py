@@ -24,4 +24,4 @@ def press(key):
 
 
 while True:
-    listen_keboard(on_press = press)
+    listen_keyboard(on_press = press)
