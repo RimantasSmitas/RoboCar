@@ -1,3 +1,6 @@
+#Run this command to install library
+#python3 -m pip install sshkeyboard 
+
 from sshkeyboard import listen_keyboard
 
 def TurnLeft():
