@@ -13,7 +13,7 @@ def GoBackward():
 
     
 while True:
-    value = raw_input()
+    value = input()
     if value == "w":
         GoForward
     if value == "s":
