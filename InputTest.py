@@ -1,3 +1,4 @@
+from sshkeyboard import listen_keyboard
 
 def TurnLeft():
     print("Turning Left")
@@ -13,7 +14,7 @@ def GoBackward():
 
     
 while True:
-    value = input()
+    value = press
     if value == "w":
         GoForward
     if value == "s":
