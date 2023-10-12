@@ -1,4 +1,4 @@
-from sshkeyboard import listen_keboard
+from sshkeyboard import listen_keyboard
 
 def TurnLeft():
     print("Turning Left")
