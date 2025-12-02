@@ -3,11 +3,11 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
-SpeedPin = 11
+SpeedPin = 12
 SpeedPin1 = 13
 # PWM pins
 
-DirectionPin = 2
+DirectionPin = 4
 DirectionPin1 = 3
 
 GPIO.setwarnings(False)			#disable warnings
