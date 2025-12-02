@@ -10,10 +10,11 @@ SpeedPin1 = 13
 DirectionPin = 4
 DirectionPin1 = 3
 
+GPIO.cleanup()
+
 GPIO.setwarnings(False)			#disable warnings
 GPIO.setmode(GPIO.BCM)	#set pin numbering system
 
-GPIO.cleanup()
 
 GPIO.setup(SpeedPin,GPIO.OUT)
 GPIO.setup(SpeedPin1,GPIO.OUT)
