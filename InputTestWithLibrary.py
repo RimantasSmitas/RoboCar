@@ -1,6 +1,6 @@
 #Run this command to install library
 # sudo apt install python3-pip
-##python3 -m pip install sshkeyboard--break-system-packages
+##python3 -m pip install sshkeyboard --break-system-packages
 
 from sshkeyboard import listen_keyboard
 
