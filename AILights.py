@@ -12,7 +12,8 @@ Behavior:
 If running on a non-Raspberry Pi system this script falls back to a
 simulated GPIO implementation that logs state changes to the console.
 """
-
+import RPi.GPIO as GPIO
+from time import sleep
 import time
 import random
 import threading
@@ -24,34 +25,32 @@ try:
 except Exception:
 	REAL_GPIO = False
 
-
-if not REAL_GPIO:
+#if not REAL_GPIO:
 	# Minimal fake GPIO for development/testing on non-Pi machines
-	class FakeGPIO:
-		BCM = 'BCM'
-		OUT = 'OUT'
-		HIGH = 1
-		LOW = 0
+#	class FakeGPIO:
+#		BCM = 'BCM'
+#		HIGH = 1
+#		LOW = 0
 
-		def __init__(self):
-			self._state = {}
+#		def __init__(self):
+#			self._state = {}
 
-		def setmode(self, mode):
-			print(f"[FakeGPIO] setmode({mode})")
+#		def setmode(self, mode):
+#			print(f"[FakeGPIO] setmode({mode})")
 
-		def setup(self, pin, mode, initial=None):
-			self._state[pin] = initial if initial is not None else self.HIGH
-			print(f"[FakeGPIO] setup(pin={pin}, mode={mode}, initial={self._state[pin]})")
+#		def setup(self, pin, mode, initial=None):
+#			self._state[pin] = initial if initial is not None else self.HIGH
+#			print(f"[FakeGPIO] setup(pin={pin}, mode={mode}, initial={self._state[pin]})")
 
-		def output(self, pin, val):
-			self._state[pin] = val
-			label = 'ON' if val == self.HIGH else 'OFF'
-			print(f"[FakeGPIO] pin {pin} -> {label}")
+#		def output(self, pin, val):
+#			self._state[pin] = val
+##			label = 'ON' if val == self.HIGH else 'OFF'
+#			print(f"[FakeGPIO] pin {pin} -> {label}")
 
-		def cleanup(self):
-			print("[FakeGPIO] cleanup()")
+#		def cleanup(self):
+#			print("[FakeGPIO] cleanup()")
 
-	GPIO = FakeGPIO()
+#	GPIO = FakeGPIO()
 
 
 # --- Configuration ---
