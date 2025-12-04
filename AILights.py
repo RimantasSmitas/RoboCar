@@ -12,7 +12,6 @@ Behavior:
 If running on a non-Raspberry Pi system this script falls back to a
 simulated GPIO implementation that logs state changes to the console.
 """
-import RPi.GPIO as GPIO
 from time import sleep
 import time
 import random
@@ -55,7 +54,7 @@ except Exception:
 
 # --- Configuration ---
 # Adjust these GPIO pin numbers for your wiring. Using BCM numbering by default.
-PINS = [17, 27, 22, 23, 24, 25, 5, 6]
+PINS = [17, 27, 23, 24]
 ALL_ON = True  # initial default: LEDs ON
 
 # Global control flag for background thread
@@ -103,7 +102,7 @@ def main_loop():
 				# turn the LED off
 				turn_off(pin)
 				# schedule it to turn back on after a random time 1..5 seconds
-				duration = random.uniform(1.0, 5.0)
+				duration = random.uniform(1.0, 2.5)
 				schedule_turn_on(pin, duration)
 			# small pause before next selection to avoid busy looping
 			time.sleep(0.5)
@@ -140,7 +139,7 @@ def stop():
 			return
 		_running = False
 	if _thread:
-		_thread.join(timeout=5.0)
+		_thread.join(timeout=2.5)
 		print('AILights stopped.')
 
 
